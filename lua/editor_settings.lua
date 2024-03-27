@@ -15,3 +15,12 @@ opt.number = true
 opt.completeopt = {'menuone', 'noselect', 'noinsert'}
 opt.shortmess = opt.shortmess + {c = true}
 opt.updatetime = 300
+
+-- Make float windows have a border
+vim.diagnostic.config({
+    virtual_text = false,
+    float = {border = "single"}
+})
+
+-- Show line diagnostics automatically in hover window
+vim.cmd [[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]]
