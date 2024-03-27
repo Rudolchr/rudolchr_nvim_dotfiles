@@ -1,0 +1,5 @@
+require('plugins')
+require('theme')
+require('editor_settings')
+require('completion')
+require('inlayhints')
